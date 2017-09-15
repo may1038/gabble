@@ -1,7 +1,7 @@
-'use strict';
+"use strict"
 module.exports = {
   up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('likes', {
+    return queryInterface.createTable("likes", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -19,9 +19,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    });
+    })
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('likes');
+    return queryInterface.dropTable("likes")
   }
-};
+}
