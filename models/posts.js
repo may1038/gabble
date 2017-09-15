@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes) {
     "posts",
     {
       title: DataTypes.STRING,
-      body: DataTypes.STRING
+      body: DataTypes.STRING,
+      userId: DataTypes.INTEGER
     },
     {
       classMethods: {

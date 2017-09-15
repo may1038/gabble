@@ -1,9 +1,8 @@
 const express = require("express")
 const app = express()
+const session = require("express-session")
 const bodyParser = require("body-parser")
 const mustache = require("mustache-express")
-const session = require("express-session")
-const bcrypt = require("bcryptjs")
 app.engine("mustache", mustache())
 app.set("view engine", "mustache")
 app.use(express.static("public"))
@@ -15,7 +14,6 @@ var sess = {
   saveUninitialized: true,
   resave: true
 }
-
 app.use(session(sess))
 
 const login = require("./routes/login")
