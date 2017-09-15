@@ -21,16 +21,16 @@ router.get("/delete/:id", function(req, res) {
 
 // router.get("/like", function(req, res) {
 //   models.likes.findAll().then(function(likes) {
-//     res.render("index", {
+//     res.redirect("/", {
 //       likes: likes
 //     })
 //   })
 // })
 
-router.post("/like/:id", function(req, res) {
+router.get("/like/:id", function(req, res) {
   const newLike = models.likes.build({
     userId: req.session.user.id,
-    postId: models.post.id
+    postId: req.params.id
   })
   newLike
     .save()

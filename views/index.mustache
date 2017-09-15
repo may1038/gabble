@@ -8,7 +8,6 @@
   <body>
 
 <h3>Test</h3>
-
 <div class="href-wrapper">
 
   <div class="">
@@ -20,7 +19,9 @@
   </div>
 
   <div class="">
-    <a href="#">Logged in as (username)</a>
+    {{#user}}
+    <a href="/">Logged in as {{username}}</a>
+    {{/user}}
   </div>
 
   <div class="">
@@ -28,16 +29,21 @@
   </div>
 </div>
 
-
   {{#posts}}
   <div class="gab">
     <label for="">Title:</label>
     <h3 class="title">{{title}}</h3>
     <label for="">Body:</label>
     <h3 class="body">{{body}}</h3>
+
+    <div class="">
+      {{#like}}
+      <h3>Liked By:{{userId}}</h3>
+      {{/like}}
+    </div>
+
     <div class="likeDelete">
-      <h3>Liked By: {{likes.userId}}</h3>
-      <a href="/like">Like</a>
+      <a href="/like/{{id}}">Like</a>
       <a href="/delete/{{id}}">Delete</a>
     </div>
   </div>

@@ -15,9 +15,15 @@ router.get("/", requireAuth, function(req, res) {
   models.posts
     .findAll({ limit: 30, order: [["createdAt", "DESC"]] })
     .then(function(posts) {
-      res.render("index", {
-        testmessage: "Succesfully rendered posts",
-        posts: posts
+      models.likes.findAll().then(function(like) {
+        models.users.findOne().then(function(user) {
+          res.render("index", {
+            testmessage: "Succesfully rendered posts",
+            posts: posts,
+            like: like,
+            user: req.session.user
+          })
+        })
       })
     })
 })

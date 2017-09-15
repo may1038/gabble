@@ -16,7 +16,9 @@
         <a href="/newGab">Create a new Gab</a>
       </div>
       <div class="">
-        <a href="#">Logged in as (username)</a>
+        {{#user}}
+        <a href="/">Logged in as {{username}}</a>
+        {{/user}}
       </div>
       <div class="">
         <a href="/logout">Log Out</a>
