@@ -1,1 +1,16 @@
+.gab {
+  border: 1px solid black;
+  margin: 20px;
+  width: 700px;
+}
 
+.href-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+}
+
+.title {
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+}

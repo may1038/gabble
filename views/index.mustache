@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/css/style.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
 
 <h3>Test</h3>
-
-{{#posts}}
-  {{title}}
-  {{body}}
-{{/posts}}
 
 <div class="href-wrapper">
   <div class="">
@@ -27,6 +23,20 @@
     <a href="/logout">Log Out</a>
   </div>
 </div>
+
+  {{#posts}}
+  <div class="gab">
+    <label for="">Title:</label>
+    <h3 class="title">{{title}}</h3>
+    <label for="">Body:</label>
+    <h3 class="body">{{body}}</h3>
+    <div class="">
+      <a href="/like">Like</a>
+      <a href="/delete/{{id}}">Delete</a>
+    </div>
+  </div>
+  {{/posts}}
+
 
   </body>
 </html>
