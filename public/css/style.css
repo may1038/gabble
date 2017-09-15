@@ -14,3 +14,9 @@
   border-bottom: 1px solid black;
   padding-bottom: 15px;
 }
+
+.likeDelete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

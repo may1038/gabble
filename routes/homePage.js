@@ -19,4 +19,27 @@ router.get("/delete/:id", function(req, res) {
     })
 })
 
+// router.get("/like", function(req, res) {
+//   models.likes.findAll().then(function(likes) {
+//     res.render("index", {
+//       likes: likes
+//     })
+//   })
+// })
+
+router.post("/like/:id", function(req, res) {
+  const newLike = models.likes.build({
+    userId: req.session.user.id,
+    postId: models.post.id
+  })
+  newLike
+    .save()
+    .then(function(like) {
+      res.redirect("/")
+    })
+    .catch(function(error) {
+      res.render("index")
+    })
+})
+
 module.exports = router

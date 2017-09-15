@@ -10,19 +10,24 @@
 <h3>Test</h3>
 
 <div class="href-wrapper">
+
   <div class="">
     <a href="/">Gabble</a>
   </div>
+
   <div class="">
     <a href="/newGab">Create a new Gab</a>
   </div>
+
   <div class="">
     <a href="#">Logged in as (username)</a>
   </div>
+
   <div class="">
     <a href="/logout">Log Out</a>
   </div>
 </div>
+
 
   {{#posts}}
   <div class="gab">
@@ -30,7 +35,8 @@
     <h3 class="title">{{title}}</h3>
     <label for="">Body:</label>
     <h3 class="body">{{body}}</h3>
-    <div class="">
+    <div class="likeDelete">
+      <h3>Liked By: {{likes.userId}}</h3>
       <a href="/like">Like</a>
       <a href="/delete/{{id}}">Delete</a>
     </div>
