@@ -8,14 +8,22 @@ router.get("/logout", function(req, res) {
 })
 
 router.get("/delete/:id", function(req, res) {
-  models.posts
+  models.likes
     .destroy({
       where: {
-        id: req.params.id
+        postId: req.params.id
       }
     })
     .then(function() {
-      res.redirect("/")
+      models.posts
+        .destroy({
+          where: {
+            id: req.params.id
+          }
+        })
+        .then(function() {
+          res.redirect("/")
+        })
     })
 })
 
