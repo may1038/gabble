@@ -18,6 +18,14 @@ a {
   width: 500px;
 }
 
+.indexHrefWrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
 .gabTitleWrapper {
   height: 50px;
   padding: 20px;
@@ -39,9 +47,9 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  border-top: 1px solid black;
-  width: 134px;
-  padding-top: 10px;
+  border-bottom: 1px solid black;
+  width: 440px;
+  padding-bottom: 10px;
 }
 
 .loginWrapper {
@@ -100,4 +108,8 @@ a {
 
 .textArea {
   border-radius: 4px;
+}
+
+.likedBy {
+  font-size: 15px;
 }
