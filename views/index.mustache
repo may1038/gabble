@@ -1,54 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="/css/style.css">
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-<h3>Test</h3>
-<div class="href-wrapper">
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8">
+  <title></title>
+</head>
 
-  <div class="">
-    <a href="/">Gabble</a>
-  </div>
+<body>
 
-  <div class="">
-    <a href="/newGab">Create a new Gab</a>
-  </div>
+  <div class="indexWrapper">
 
-  <div class="">
-    {{#user}}
-    <a href="/">Logged in as {{username}}</a>
-    {{/user}}
-  </div>
-
-  <div class="">
-    <a href="/logout">Log Out</a>
-  </div>
-</div>
-
-  {{#posts}}
-  <div class="gab">
-    <label for="">Title:</label>
-    <h3 class="title">{{title}}</h3>
-    <label for="">Body:</label>
-    <h3 class="body">{{body}}</h3>
-
-    <div class="">
-      {{#like}}
-      <h3>Liked By:{{userId}}</h3>
-      {{/like}}
+    <div class="header">
+      <h1>Gabble</h1>
     </div>
 
-    <div class="likeDelete">
-      <a href="/like/{{id}}">Like</a>
-      <a href="/delete/{{id}}">Delete</a>
+    <div class="href-wrapper">
+
+      <div class="">
+        <a href="/">Gabble</a>
+      </div>
+
+      <div class="">
+        <a href="/newGab">Create a new Gab</a>
+      </div>
+
+      <div class="">
+        {{#user}}
+          <a href="/">Logged in as {{username}}</a>
+        {{/user}}
+      </div>
+
+      <div class="">
+        <a href="/logout">Log Out</a>
+      </div>
     </div>
+
+    {{#posts}}
+      <div class="gab">
+        <div class="gabTitleWrapper">
+        <strong class="label">
+        <label for="">Title:</label>
+        </strong>
+        <h3>{{title}}</h3>
+      </div>
+      <div class="gabBodyWrapper">
+        <strong class="label">
+        <label for="">Body:</label>
+        </strong>
+        <h3>{{body}}</h3>
+      </div>
+
+        <div class="">
+          {{#like}}
+            <h3>Liked By:{{userId}}</h3>
+          {{/like}}
+        </div>
+
+        <div class="likeDelete">
+          <div class="likeDeleteHref">
+            <a href="/like/{{id}}">Like</a>
+          </div>
+          <div class="likeDeleteHref">
+            <a href="/delete/{{id}}">Delete</a>
+          </div>
+        </div>
+      </div>
+    {{/posts}}
+
   </div>
-  {{/posts}}
 
+</body>
 
-  </body>
 </html>

@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Gab away</title>
-  </head>
-  <body>
 
-    <h2>newGab</h2>
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8">
+  <title>Gab away</title>
+</head>
 
-    <div class="href-wrapper">
-      <div class="">
-        <a href="/">Gabble</a>
-      </div>
-      <div class="">
-        <a href="/newGab">Create a new Gab</a>
-      </div>
-      <div class="">
-        {{#user}}
+<body>
+
+<div class="newGabWrapper">
+
+  <div class="href-wrapper">
+    <div class="">
+      <a href="/">Gabble</a>
+    </div>
+    <div class="">
+      <a href="/newGab">Create a new Gab</a>
+    </div>
+    <div class="">
+      {{#user}}
         <a href="/">Logged in as {{username}}</a>
-        {{/user}}
+      {{/user}}
+    </div>
+    <div class="">
+      <a href="/logout">Log Out</a>
+    </div>
+  </div>
+
+  <div class="gabWrapper">
+    <form class="" action="/newGab" method="post">
+      <div class="username">
+        <label for="">Title:</label>
       </div>
       <div class="">
-        <a href="/logout">Log Out</a>
+        <input class="inputText" type="text" name="title" value="">
       </div>
-    </div>
+      <div class="password">
+        <label>Gab away my friend:</label>
+      </div>
+      <div class="">
+        <textarea class="textArea" name="body" rows="15" cols="80"></textarea>
+      </div>
+      <div class="submitBtn">
+        <button type="submit" name="button">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
 
-    <div class="gabWrapper">
-      <form class="" action="/newGab" method="post">
-        <label for="">Title</label>
-        <div class="">
-          <input type="text" name="title" value="">
-        </div>
-        <div class="">
-          <label>Gab away my friend:</label>
-        </div>
-        <div class="">
-          <textarea name="body" rows="15" cols="80"></textarea>
-        </div>
-        <div class="">
-          <button type="submit" name="button">Submit</button>
-        </div>
-      </form>
-    </div>
+</body>
 
-  </body>
 </html>

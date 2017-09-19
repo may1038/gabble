@@ -1,22 +1,103 @@
+a {
+  text-decoration: none;
+  color: #004aff;
+}
+
+.label {
+  color: #fd9595;
+}
+
 .gab {
-  border: 1px solid black;
-  margin: 20px;
   width: 700px;
+  margin-top: 20px;
 }
 
 .href-wrapper {
   display: flex;
-  justify-content: space-between;
-  width: 450px;
+  justify-content: space-around;
+  width: 500px;
 }
 
-.title {
-  border-bottom: 1px solid black;
+.gabTitleWrapper {
+  height: 50px;
+  padding: 20px;
+  border-bottom-style: dotted;
+  border-color: #a09d9d;
+  padding-bottom: 24px;
+  margin: 0px;
+  width: 400px;
+}
+
+.gabBodyWrapper {
+  padding: 20px;
   padding-bottom: 15px;
+  margin: 0px;
+  border-radius: 3px;
 }
 
 .likeDelete {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  border-top: 1px solid black;
+  width: 134px;
+  padding-top: 10px;
+}
+
+.loginWrapper {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.indexWrapper {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.newGabWrapper {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.registerWrapper {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.registerUser {
+  margin-top: 20px;
+}
+
+.submitBtn {
+  margin-top: 10px;
+}
+
+.username {
+  margin-top: 10px;
+}
+
+.password {
+  margin-top: 10px;
+}
+
+.displayname {
+  margin-top: 10px;
+}
+
+.inputText {
+  width: 200px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.likeDeleteHref {
+  margin-left: 20px;
+}
+
+.header {
+  color: #fd9595;
+}
+
+.textArea {
+  border-radius: 4px;
 }
